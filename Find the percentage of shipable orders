@@ -1,0 +1,6 @@
+SELECT 
+    ROUND(COUNT(CASE WHEN c.address IS NOT NULL AND c.address <> '' THEN 1 END) * 100.0 / COUNT(o.id), 2) AS shipable_percentage
+FROM 
+    orders o
+LEFT JOIN 
+    customers c ON o.cust_id = c.id;
