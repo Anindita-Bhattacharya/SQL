@@ -1,0 +1,5 @@
+SELECT 
+    ABS(
+        (SELECT MAX(salary) FROM db_employee WHERE department_id = (SELECT id FROM db_dept WHERE department = 'Marketing')) -
+        (SELECT MAX(salary) FROM db_employee WHERE department_id = (SELECT id FROM db_dept WHERE department = 'Engineering'))
+    ) AS salary_difference;
