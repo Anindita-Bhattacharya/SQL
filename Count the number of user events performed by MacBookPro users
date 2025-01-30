@@ -1,0 +1,5 @@
+select count(user_id) as num_mac_users,event_name
+from playbook_events
+where device = "macbook pro"
+group by event_name
+order by num_mac_users desc;
