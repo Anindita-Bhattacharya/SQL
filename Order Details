@@ -1,0 +1,4 @@
+select first_name, order_date, order_details, total_order_cost
+from orders left join customers on orders.cust_id = customers.id
+where first_name IN ('Jill','Eva')
+order by cust_id ASC;
