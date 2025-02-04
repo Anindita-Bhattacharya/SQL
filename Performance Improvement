@@ -1,0 +1,3 @@
+select t2.TestId
+from Tests t1,Tests t2
+where t1.TestId=t2.TestId-1 and t1.marks<t2.marks
