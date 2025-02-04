@@ -1,0 +1,5 @@
+SELECT t1.Name AS Labourer1, t2.Name AS Labourer2, t1.Country AS Country FROM LABOURERS t1
+JOIN LABOURERS t2
+ON t1.Country = t2.Country
+WHERE t1.ID != t2.ID
+ORDER BY t1.Name, t2.Name, t1.Country;
