@@ -1,0 +1,10 @@
+# You are using MYSQL
+select CONCAT(first_name,' ',last_name) as employee_name,employee_id,country_name
+from employees e
+join departments d 
+on e.department_id=d.department_id 
+join locations l 
+on d.location_id=l.location_id 
+join countries c 
+on c.country_id=l.country_id
+order by employee_id desc;
