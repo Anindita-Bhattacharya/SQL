@@ -1,0 +1,2 @@
+# You are using MYSQL
+DELETE FROM owner WHERE owner_id=(SELECT owner_id FROM product WHERE product_name= 'Unicorn');
